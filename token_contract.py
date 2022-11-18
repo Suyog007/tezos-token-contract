@@ -17,8 +17,7 @@ class NftWithAdmin(FA2.Admin, FA2.Fa2Nft, FA2.OnchainviewBalanceOf,
     def add_whitelist(self, params):
         """Add whitelist address through admin."""
         sp.verify(self.is_administrator(sp.sender), "Only Admin can whitelist the address.")
-        sp.
-        for x in params:
+        sp.for x in params:
             sp.verify(~self.data.whitelist.contains(x),
                       message="Already Whitelisted")
             self.data.whitelist.add(x)
